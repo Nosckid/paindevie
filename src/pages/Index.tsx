@@ -5,19 +5,19 @@ import { Footer } from "@/components/Footer";
 const categories = [
   {
     title: "Volailles",
-    image: "/placeholder.svg",
+    image: "src/picture/volaille.jpg",
     description: "Premium quality poultry products",
     link: "/products?category=volailles",
   },
   {
     title: "Poissons",
-    image: "/placeholder.svg",
+    image: "src/picture/poisson.jpg",
     description: "Fresh fish and seafood",
     link: "/products?category=poissons",
   },
   {
     title: "Fruits et Légumes",
-    image: "/placeholder.svg",
+    image: "src/picture/fruit.jpg",
     description: "Fresh fruits and vegetables",
     link: "/products?category=fruits-legumes",
   },
