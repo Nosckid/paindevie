@@ -7,19 +7,19 @@ import { ProductCard } from "@/components/ProductCard";
 const productGroups = [
   {
     title: "Volailles",
-    image: "/placeholder.svg",
+    image: "src/picture/volaille.jpg",
     description: "Découvrez notre sélection de volailles de qualité",
     link: "/products?category=volailles",
   },
   {
     title: "Poissons",
-    image: "/placeholder.svg",
+    image: "src/picture/poisson.jpg",
     description: "Une variété de poissons frais pour tous les goûts",
     link: "/products?category=poissons",
   },
   {
     title: "Fruits et Légumes",
-    image: "/placeholder.svg",
+    image: "src/picture/fruit.jpg",
     description: "Des fruits et légumes frais et de saison",
     link: "/products?category=fruits-legumes",
   },
@@ -31,24 +31,24 @@ const products = {
     { name: "Pointe Amadorie", image: "/placeholder.svg", category: "Volailles" },
     { name: "Pointe SNV", image: "/placeholder.svg", category: "Volailles" },
     { name: "Pointe Clevia", image: "/placeholder.svg", category: "Volailles" },
-    { name: "Aileron", image: "/placeholder.svg", category: "Volailles" },
-    { name: "Poulet Entier", image: "/placeholder.svg", category: "Volailles" },
-    { name: "Cuisses de Poulet", image: "/placeholder.svg", category: "Volailles" },
+    { name: "Aileron", image: "src/picture/aileron.jpg", category: "Volailles" },
+    { name: "Poulet Entier", image: "src/picture/entier.jpg", category: "Volailles" },
+    { name: "Cuisses de Poulet", image: "src/picture/cuisse_poulet.jpg", category: "Volailles" },
   ],
   poissons: [
-    { name: "Tilapia", image: "/placeholder.svg", category: "Poissons" },
-    { name: "Sardine", image: "/placeholder.svg", category: "Poissons" },
-    { name: "Faux Bar", image: "/placeholder.svg", category: "Poissons" },
-    { name: "Yellow Crocker", image: "/placeholder.svg", category: "Poissons" },
-    { name: "Maquereau", image: "/placeholder.svg", category: "Poissons" },
+    { name: "Tilapia", image: "src/picture/tilapia.jpg", category: "Poissons" },
+    { name: "Sardine", image: "src/picture/sardine.jpg", category: "Poissons" },
+    { name: "Faux Bar", image: "src/picture/faux bar.jpg", category: "Poissons" },
+    { name: "Yellow Croacker", image: "src/picture/yellow croaker.jpg", category: "Poissons" },
+    { name: "Maquereau", image: "src/picture/maquereau.jpg", category: "Poissons" },
   ],
   "fruits-legumes": [
-    { name: "Pomme Fruit", image: "/placeholder.svg", category: "Fruits et Légumes" },
-    { name: "Poire", image: "/placeholder.svg", category: "Fruits et Légumes" },
-    { name: "Pêche", image: "/placeholder.svg", category: "Fruits et Légumes" },
-    { name: "Prune", image: "/placeholder.svg", category: "Fruits et Légumes" },
-    { name: "Raisin", image: "/placeholder.svg", category: "Fruits et Légumes" },
-    { name: "Pomme de Terre", image: "/placeholder.svg", category: "Fruits et Légumes" },
+    { name: "Pomme Fruit", image: "/src/picture/apple.jpg", category: "Fruits et Légumes" },
+    { name: "Poire", image: "src/picture/poire.jpg", category: "Fruits et Légumes" },
+    { name: "Pêche", image: "src/picture/peche.jpg", category: "Fruits et Légumes" },
+    { name: "Prune", image: "src/picture/prune.jpg", category: "Fruits et Légumes" },
+    { name: "Raisin", image: "/src/picture/raisin.jpg", category: "Fruits et Légumes" },
+    { name: "Pomme de Terre", image: "src/picture/pommedeterre.jpg", category: "Fruits et Légumes" },
   ],
 };
 
@@ -59,7 +59,7 @@ const Products = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      
+
       <main className="flex-grow pt-24 px-4">
         <div className="container mx-auto">
           {!category ? (

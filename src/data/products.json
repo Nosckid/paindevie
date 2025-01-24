@@ -1,0 +1,37 @@
+{
+  "productGroups": [
+    {
+      "title": "Volailles",
+      "image": "/images/volailles-group.jpg",
+      "description": "Découvrez notre sélection de volailles de qualité",
+      "link": "/products?category=volailles"
+    },
+    {
+      "title": "Poissons",
+      "image": "/images/poissons-group.jpg",
+      "description": "Une variété de poissons frais pour tous les goûts",
+      "link": "/products?category=poissons"
+    },
+    {
+      "title": "Fruits et Légumes",
+      "image": "/images/fruits-legumes-group.jpg",
+      "description": "Des fruits et légumes frais et de saison",
+      "link": "/products?category=fruits-legumes"
+    }
+  ],
+  "products": {
+    "volailles": [
+      { "name": "Saucisse Minu", "image": "/images/volailles/saucisse-minu.jpg", "category": "Volailles" },
+      { "name": "Pointe Amadorie", "image": "/images/volailles/pointe-amadorie.jpg", "category": "Volailles" },
+      { "name": "Pointe SNV", "image": "/images/volailles/pointe-snv.jpg", "category": "Volailles" }
+    ],
+    "poissons": [
+      { "name": "Tilapia", "image": "/images/poissons/tilapia.jpg", "category": "Poissons" },
+      { "name": "Sardine", "image": "/images/poissons/sardine.jpg", "category": "Poissons" }
+    ],
+    "fruits-legumes": [
+      { "name": "Pomme Fruit", "image": "/images/fruits-legumes/pomme-fruit.jpg", "category": "Fruits et Légumes" },
+      { "name": "Poire", "image": "/images/fruits-legumes/poire.jpg", "category": "Fruits et Légumes" }
+    ]
+  }
+}
