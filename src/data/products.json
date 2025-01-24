@@ -2,7 +2,7 @@
   "productGroups": [
     {
       "title": "Volailles",
-      "image": "/images/volailles-group.jpg",
+      "image": "src/picture/volaille.jpg",
       "description": "Découvrez notre sélection de volailles de qualité",
       "link": "/products?category=volailles"
     },

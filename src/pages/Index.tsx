@@ -1,22 +1,30 @@
+// Required imports
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom"; // For navigation
+import productsData from "@/data/products.json"; // Import JSON data
 
 const Home = () => {
   const images = [
-    "/placeholder-image1.jpg", // Replace with actual image paths
-    "/placeholder-image2.jpg",
-    "/placeholder-image3.jpg",
+    "src/picture/background/immeuble.jpeg",
+    "src/picture/background/devant.jpeg",
+    "src/picture/background/devante.jpeg",
+    "src/picture/background/dechargement.jpeg",
+    "src/picture/background/decharge.jpeg",
+    "src/picture/background/another.jpeg",
+    "src/picture/background/anotherone.jpeg",
+    "src/picture/background/anothertwo.jpeg",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Auto-slide every 30 seconds
+  // Auto-slide every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 30000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [images.length]);
@@ -80,65 +88,21 @@ const Home = () => {
             Nos Catégories
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Category Card 1 */}
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
-              <img
-                src="/category1.jpg" // Replace with actual category image
-                alt="Volailles"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="text-xl font-semibold mb-2">Volailles</h3>
-                <p className="text-sm text-gray-600">
-                  Découvrez nos volailles de qualité, élevées avec soin.
-                </p>
-              </div>
-            </div>
-
-            {/* Category Card 2 */}
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
-              <img
-                src="/category2.jpg" // Replace with actual category image
-                alt="Poissons"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="text-xl font-semibold mb-2">Poissons</h3>
-                <p className="text-sm text-gray-600">
-                  Des poissons frais directement issus de nos pêcheries.
-                </p>
-              </div>
-            </div>
-
-            {/* Category Card 3 */}
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
-              <img
-                src="/category3.jpg" // Replace with actual category image
-                alt="Fruits"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="text-xl font-semibold mb-2">Fruits</h3>
-                <p className="text-sm text-gray-600">
-                  Savourez nos fruits frais et riches en saveurs.
-                </p>
-              </div>
-            </div>
-
-            {/* Category Card 4 */}
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
-              <img
-                src="/category4.jpg" // Replace with actual category image
-                alt="Légumes"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="text-xl font-semibold mb-2">Légumes</h3>
-                <p className="text-sm text-gray-600">
-                  Des légumes frais pour des repas sains et équilibrés.
-                </p>
-              </div>
-            </div>
+            {productsData.productGroups.map((group, index) => (
+              <Link key={index} to={group.link}>
+                <div className="bg-white shadow-md rounded-lg overflow-hidden cursor-pointer">
+                  <img
+                    src={group.image}
+                    alt={group.title}
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="p-4">
+                    <h3 className="text-xl font-semibold mb-2">{group.title}</h3>
+                    <p className="text-sm text-gray-600">{group.description}</p>
+                  </div>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
